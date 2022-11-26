@@ -91,6 +91,7 @@ extension MovieGridViewController: UISearchResultsUpdating {
 
 extension MovieGridViewController: TNMovieViewDelegate {
     func didTapMovie(selectedMovie: Int) {
+        contentView.searchBar.isActive = false
         coordinator?.showMovieDetailScreen(view: selectedMovie)
     }
 }
